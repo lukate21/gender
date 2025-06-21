@@ -4,47 +4,62 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>동글이의 성별은?</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
-        body, html {
+        /* 페이지 전체를 화면 중앙에 정렬하기 위한 스타일 */
+        html, body {
             height: 100%;
             margin: 0;
-            background-color: #f8f9fa;
+            background-color: #f0f2f5; /* 부드러운 배경색 */
         }
         .container-center {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
+            padding: 1rem;
         }
         .reveal-card {
             border: none;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
         }
-        /* 컵케익 이미지 스타일 */
-        .cupcake-image {
-            max-width: 200px;
-            cursor: pointer; /* 마우스를 올리면 손가락 모양으로 변경 */
-            transition: transform 0.3s ease; /* 부드러운 전환 효과 */
+        /* 아이콘 버튼 스타일 */
+        .icon-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* 동그란 버튼 */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem; /* 아이콘 크기 */
+            transition: all 0.3s ease;
         }
-        .cupcake-image:hover {
-            transform: scale(1.08); /* 마우스를 올리면 살짝 커짐 */
+        .icon-button:hover {
+            transform: scale(1.1); /* 마우스 올리면 커지는 효과 */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <div class="container-center">
-        <div class="card text-center reveal-card" style="width: 25rem;">
+        <div class="card text-center reveal-card">
             <div class="card-body p-5">
-                <h3 class="card-title mb-3">Gender Reveal</h3>
-                <p class="fs-4 mb-4">
+                <p class="fs-4 mb-5">
                     <strong>동글이</strong>의 성별은 무엇일까요?
                 </p>
-                <a href="result.html">
-                    <img src="https://i.ibb.co/3cHxjP8/cupcake-whole.png" alt="성별 확인 컵케익" class="cupcake-image">
+                
+                <a href="result.html" class="btn btn-primary icon-button" title="결과 확인하기">
+                    <i class="bi bi-gift-fill"></i>
                 </a>
-                <p class="mt-4 text-secondary">컵케익을 눌러 확인해보세요!</p>
+                
+                <p class="mt-4 text-muted">선물 상자를 눌러 확인해보세요!</p>
             </div>
         </div>
     </div>
